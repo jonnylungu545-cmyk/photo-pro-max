@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 from models import db, User, Photo   
-
-      import os
-
+import os
 app = Flask(__name__)
 import os
 
