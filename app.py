@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, redirect, session
-from models import db, User, Photo
+from models import db, User, Photo   
+
+      import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 app.secret_key = "change_this_secret"
 db.init_app(app)
 
