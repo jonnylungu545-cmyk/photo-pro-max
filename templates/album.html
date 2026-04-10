@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Album</title>
+</head>
+<body style="font-family:Arial;text-align:center;">
+
+<h2>📸 Pozele tale</h2>
+
+{% for p in photos %}
+    <img src="{{ p.url }}" width="300" style="margin:10px;"><br>
+{% endfor %}
+
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+</html>
