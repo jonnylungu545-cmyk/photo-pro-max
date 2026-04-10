@@ -4,7 +4,10 @@ from models import db, User, Photo
       import os
 
 app = Flask(__name__)
+import os
+
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "change_this_secret"
 db.init_app(app)
 
